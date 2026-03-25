@@ -232,3 +232,6 @@ Atribut di setiap class dideklarasikan `private` atau `protected` dan hanya dapa
 
 ## Keunikan 
 Program ini tidak sekadar membandingkan pilihan secara sederhana. Setiap faktor memiliki **bobot probabilitas** yang mencerminkan ketidakpastian dunia nyata. Misalnya, benefit "diterima PTN top 3" bernilai tinggi, namun jika probabilitasnya rendah (0.2), kontribusinya terhadap keputusan akhir tetap kecil. Pendekatan ini membuat analisis lebih realistis dibandingkan hanya menjumlahkan nilai mentah tanpa mempertimbangkan kemungkinan terjadinya suatu faktor. Ide program ini terinspirasi dari buku 'Makanya, Mikir!' karya Cania Citta dan Abigail Limuria. Buku tersebut membuka perspektif baru bahwa keputusan sehari-hari, sekecil apapun, dapat dianalisis secara rasional dan terukur.
+
+## Author
+Putri Permata Sabila — 5027251047 — Teknologi Informasi ITS 2025
