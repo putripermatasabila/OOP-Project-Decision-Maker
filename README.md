@@ -9,8 +9,7 @@ Setiap Benefit dan Cost memiliki:
 - **Probability (0.0-1.0)** — seberapa besar kemungkinan faktor tersebut terjadi
  
 Skor akhir tiap pilihan dihitung dari: `Σ(value × probability)` untuk Benefit dikurangi `Σ(value × probability)` untuk Cost. Pilihan dengan skor tertinggi akan direkomendasikan oleh sistem.
- 
----
+
 ## Class Diagram
 <img width="6929" height="1929" alt="Animal Classification Model-2026-03-25-051631" src="https://github.com/user-attachments/assets/ed4ba173-6d28-4391-87ea-a966bde0b2e2" />
 
@@ -208,9 +207,28 @@ class FinalDecision {
 
 ```
 ## Screenshoot output
+### Pedoman awal program
+<img width="1722" height="328" alt="Screenshot 2026-03-25 123619" src="https://github.com/user-attachments/assets/3aedcab1-20f1-4755-89eb-d18bec620955" />
 
+### Tampilan input dari user
+<img width="563" height="741" alt="Screenshot 2026-03-25 114432" src="https://github.com/user-attachments/assets/29ab982d-24d9-41dc-9333-71a9d00194fb" />
 
-<img width="989" height="392" alt="Screenshot 2026-03-25 114355" src="ht
+### Hasil
+<img width="989" height="392" alt="Screenshot 2026-03-25 114355" src="https://github.com/user-attachments/assets/c7dedb41-8418-40db-bbad-235ad1300a1d" />
 
-<img width="563" height="741" alt="Screenshot 2026-03-25 114432" src="https://github.com/user-attachments/assets/68708750-4ad0-449c-ae46-e48e7b5828d2" />
-tps://github.com/user-attachments/assets/8db3dffa-0ea9-46e8-89d4-d54e025179cb" />
+## Penerapan Prinsip OOP
+ 
+1. Abstraction
+Class `Faktor` merupakan abstract class yang mendefinisikan kerangka umum dari sebuah faktor keputusan. Method `calculateValueProb()` bersifat abstract karena implementasinya berbeda antara Benefit dan Cost.
+ 
+2. Inheritance
+Class `Benefit` dan `Cost` mewarisi class `Faktor`, sehingga tidak perlu mendefinisikan ulang atribut seperti `description`, `value`, dan `probability`.
+ 
+3. Polymorphism
+Method `calculateValueProb()` di-override oleh `Benefit` dan `Cost` dengan perilaku berbeda — Benefit mengembalikan nilai positif, Cost mengembalikan nilai negatif. Keduanya diperlakukan seragam sebagai `Faktor` di dalam `ArrayList<Faktor>`.
+ 
+4. Encapsulation
+Atribut di setiap class dideklarasikan `private` atau `protected` dan hanya dapat diakses melalui getter dan setter yang disediakan.
+
+## Keunikan 
+Program ini tidak sekadar membandingkan pilihan secara sederhana. Setiap faktor memiliki **bobot probabilitas** yang mencerminkan ketidakpastian dunia nyata. Misalnya, benefit "diterima PTN top 3" bernilai tinggi, namun jika probabilitasnya rendah (0.2), kontribusinya terhadap keputusan akhir tetap kecil. Pendekatan ini membuat analisis lebih realistis dibandingkan hanya menjumlahkan nilai mentah tanpa mempertimbangkan kemungkinan terjadinya suatu faktor. 
