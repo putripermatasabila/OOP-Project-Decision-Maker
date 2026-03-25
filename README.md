@@ -230,7 +230,7 @@ Method `calculateValueProb()` di-override oleh `Benefit` dan `Cost` dengan peril
 4. Encapsulation
 Atribut di setiap class dideklarasikan `private` atau `protected` dan hanya dapat diakses melalui getter dan setter yang disediakan.
 
-## Keunikan 
+## Keunikan program
 Program ini tidak sekadar membandingkan pilihan secara sederhana. Setiap faktor memiliki **bobot probabilitas** yang mencerminkan ketidakpastian dunia nyata. Misalnya, benefit "diterima PTN top 3" bernilai tinggi, namun jika probabilitasnya rendah (0.2), kontribusinya terhadap keputusan akhir tetap kecil. Pendekatan ini membuat analisis lebih realistis dibandingkan hanya menjumlahkan nilai mentah tanpa mempertimbangkan kemungkinan terjadinya suatu faktor. Ide program ini terinspirasi dari buku 'Makanya, Mikir!' karya Cania Citta dan Abigail Limuria. Buku tersebut membuka perspektif baru bahwa keputusan sehari-hari, sekecil apapun, dapat dianalisis secara rasional dan terukur.
 
 ## Author
