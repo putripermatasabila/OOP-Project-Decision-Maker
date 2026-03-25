@@ -1,5 +1,5 @@
 # OOP-Project-Decision-Maker with Cost Benefit Analysis
-Program berbasis Java ini dibuat bedasarkan *problem* yang terjadi ketika bingung mengambil sebuah keputusan di kehidupannya. Metode ini membantu *user* bisa mempertimbangkan keputusannya secara rasional dengan metode **Cost Benefit Analysis**.Metode ini dari referensi buku "Makanya, Mikir!" karya Cania Citta dan Abigail Limuria yang membuat kesan yang kuat saat saya membacanya.
+Program berbasis Java ini dibuat berdasarkan *problem* yang terjadi ketika bingung mengambil sebuah keputusan di kehidupannya. Metode ini membantu *user* bisa mempertimbangkan keputusannya secara rasional dengan metode **Cost Benefit Analysis**
 
 ## Deskripsi Kasus
 Dalam kehidupan sehari-hari, kita sering dihadapkan pada pilihan yang sulit, misalnya memilih antara tetap di kampus saat ini atau pindah kampus, membeli motor atau mobil, dan sebagainya. Program ini membantu pengguna menganalisis setiap pilihan secara objektif berdasarkan keuntungan (Benefit) dan kerugian (Cost) yang dimiliki masing-masing pilihan.
@@ -19,16 +19,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void Main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner (System.in);
         FinalDecision fd = new FinalDecision();
 
         System.out.println("Haii, Selamat datang di Decision Maker!!!\n");
         System.out.println("Program ini ditujukan untuk pengguna yang memiliki kebingungan dalam memilih pilihan");
-        System.out.println("Keputusan yang disarankan dari sistem bedasarkan aturan Cost and Benefit.");
+        System.out.println("Keputusan yang disarankan dari sistem berdasarkan aturan Cost and Benefit.");
         System.out.println("Jadi setiap pilihan pastinya memiliki Cost dan Benfit yang didapat, lalu setiap cost atau benefit mempunyai:\n ");                   
-        System.out.println("1. Value(harga): Berikan rentang 1-5 [bilangan bulat] bedasarkan seberapa menguntungkan(benefit)/merugikan(cost) sekali hal tersebut bagimu");
-        System.out.println("2. Probabilty(kemungkinan): Berikan rentang 0-1 [bilangan desimal] bedasarkan seberapa mungkin cost/benefit itu terjadi\n");
+        System.out.println("1. Value(harga): Berikan rentang 1-5 [bilangan bulat] berdasarkan seberapa menguntungkan(benefit)/merugikan(cost) sekali hal tersebut bagimu");
+        System.out.println("2. Probabilty(kemungkinan): Berikan rentang 0-1 [bilangan desimal] berdasarkan seberapa mungkin cost/benefit itu terjadi\n");
 
         System.out.println("Sebagai contoh, dalam kasus memilih antara tetap di kampus saat ini VS ikut UTBK lagi, pilihan ikut UTBK lagi memiliki benefit berupa biaya yang lebih terjangkau (value=5, probability=1.0)\n" +
                             "value faktor biaya terjangkau =5 karena semenguntungkan itu masalah biaya bagimu, probability 1 sebab sudah pasti terjadi\n" +
@@ -206,7 +206,7 @@ class FinalDecision {
 }
 
 ```
-## Screenshoot output
+## Screenshot output
 ### Pedoman awal program
 <img width="1722" height="328" alt="Screenshot 2026-03-25 123619" src="https://github.com/user-attachments/assets/3aedcab1-20f1-4755-89eb-d18bec620955" />
 
@@ -231,4 +231,4 @@ Method `calculateValueProb()` di-override oleh `Benefit` dan `Cost` dengan peril
 Atribut di setiap class dideklarasikan `private` atau `protected` dan hanya dapat diakses melalui getter dan setter yang disediakan.
 
 ## Keunikan 
-Program ini tidak sekadar membandingkan pilihan secara sederhana. Setiap faktor memiliki **bobot probabilitas** yang mencerminkan ketidakpastian dunia nyata. Misalnya, benefit "diterima PTN top 3" bernilai tinggi, namun jika probabilitasnya rendah (0.2), kontribusinya terhadap keputusan akhir tetap kecil. Pendekatan ini membuat analisis lebih realistis dibandingkan hanya menjumlahkan nilai mentah tanpa mempertimbangkan kemungkinan terjadinya suatu faktor. 
+Program ini tidak sekadar membandingkan pilihan secara sederhana. Setiap faktor memiliki **bobot probabilitas** yang mencerminkan ketidakpastian dunia nyata. Misalnya, benefit "diterima PTN top 3" bernilai tinggi, namun jika probabilitasnya rendah (0.2), kontribusinya terhadap keputusan akhir tetap kecil. Pendekatan ini membuat analisis lebih realistis dibandingkan hanya menjumlahkan nilai mentah tanpa mempertimbangkan kemungkinan terjadinya suatu faktor. Ide program ini terinspirasi dari buku 'Makanya, Mikir!' karya Cania Citta dan Abigail Limuria. Buku tersebut membuka perspektif baru bahwa keputusan sehari-hari, sekecil apapun, dapat dianalisis secara rasional dan terukur.
